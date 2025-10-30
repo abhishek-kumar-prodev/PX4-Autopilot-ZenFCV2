@@ -384,8 +384,8 @@
  * CAN1 is routed to transceiver.
  */
 
-#define GPIO_CAN1_RX     GPIO_CAN1_RX_2      /* PB8  */
-#define GPIO_CAN1_TX     GPIO_CAN1_TX_2      /* PB9  */
+#define GPIO_CAN1_RX     GPIO_CAN1_RX_3      /* PD0 Changed  */
+#define GPIO_CAN1_TX     GPIO_CAN1_TX_3      /* PD1 Changed  */
 
 /* SPI
  *
