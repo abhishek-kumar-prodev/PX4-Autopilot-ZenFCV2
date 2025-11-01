@@ -37,10 +37,16 @@
 
 
 constexpr px4_spi_bus_t px4_spi_buses[SPI_BUS_MAX_BUS_ITEMS] = {
+	initSPIBus(SPI::Bus::SPI1, {
+		initSPIDevice(DRV_GYR_DEVTYPE_BMI088, SPI::CS{GPIO::PortC, GPIO::Pin14}, SPI::DRDY{GPIO::PortE, GPIO::Pin5}),
+		initSPIDevice(DRV_ACC_DEVTYPE_BMI088, SPI::CS{GPIO::PortC, GPIO::Pin15}, SPI::DRDY{GPIO::PortE, GPIO::Pin4}),
+	}),
 	initSPIBus(SPI::Bus::SPI2, {
-		initSPIDevice(DRV_GYR_DEVTYPE_BMI088, SPI::CS{GPIO::PortD, GPIO::Pin5}),
-		initSPIDevice(DRV_ACC_DEVTYPE_BMI088, SPI::CS{GPIO::PortD, GPIO::Pin4}),
-		initSPIDevice(DRV_IMU_DEVTYPE_BMI270, SPI::CS{GPIO::PortA, GPIO::Pin15}),
+		initSPIDevice(DRV_OSD_DEVTYPE_ATXXXX, SPI::CS{GPIO::PortD, GPIO::Pin4}),
+	}),
+	initSPIBus(SPI::Bus::SPI3, {
+		initSPIDevice(DRV_GYR_DEVTYPE_BMI088, SPI::CS{GPIO::PortA, GPIO::Pin15}, SPI::DRDY{GPIO::PortB, GPIO::Pin0}),
+		initSPIDevice(DRV_ACC_DEVTYPE_BMI088, SPI::CS{GPIO::PortC, GPIO::Pin13}, SPI::DRDY{GPIO::PortE, GPIO::Pin6}),
 	}),
 };
 
