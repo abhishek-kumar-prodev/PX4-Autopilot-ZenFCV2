@@ -394,14 +394,20 @@
 
 #define ADJ_SLEW_RATE(p) (((p) & ~GPIO_SPEED_MASK) | (GPIO_SPEED_2MHz))
 
-//#define GPIO_SPI1_MISO   GPIO_SPI1_MISO_1               /* PA6  */
-//#define GPIO_SPI1_MOSI   GPIO_SPI1_MOSI_1               /* PA7  */
-//#define GPIO_SPI1_SCK    ADJ_SLEW_RATE(GPIO_SPI1_SCK_1) /* PA5 */
+//BMI088_1
+#define GPIO_SPI1_MISO   GPIO_SPI1_MISO_1               /* PA6 OK*/
+#define GPIO_SPI1_MOSI   GPIO_SPI1_MOSI_1               /* PA7 OK*/
+#define GPIO_SPI1_SCK    ADJ_SLEW_RATE(GPIO_SPI1_SCK_1) /* PA5 OK*/
 
-#define GPIO_SPI2_MISO   GPIO_SPI2_MISO_2               /* PC2  */
-#define GPIO_SPI2_MOSI   GPIO_SPI2_MOSI_3               /* PC3 */
-#define GPIO_SPI2_SCK    ADJ_SLEW_RATE(GPIO_SPI2_SCK_5) /* PD3  */
+// OSD
+#define GPIO_SPI2_MISO   GPIO_SPI2_MISO_2               /* PC2  OK*/
+#define GPIO_SPI2_MOSI   GPIO_SPI2_MOSI_3               /* PC3  OK*/
+#define GPIO_SPI2_SCK    ADJ_SLEW_RATE(GPIO_SPI2_SCK_5) /* PD3  OK*/
 
+// BMI088_2
+#define GPIO_SPI3_MISO   GPIO_SPI3_MISO_2               /* PC11 OK*/
+#define GPIO_SPI3_MOSI   GPIO_SPI3_MOSI_4               /* PB5  OK*/
+#define GPIO_SPI3_SCK    ADJ_SLEW_RATE(GPIO_SPI3_SCK_2) /* PC10 OK*/
 
 
 /* I2C
