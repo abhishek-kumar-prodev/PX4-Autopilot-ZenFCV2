@@ -79,14 +79,13 @@
 
 /* Define GPIO pins used as ADC N.B. Channel numbers must match below  */
 #define PX4_ADC_GPIO  \
-	/* PC0  */  GPIO_ADC123_INP10, \
-	/* PC1  */  GPIO_ADC123_INP11
+	/* PC4  */  GPIO_ADC12_INP4,   \
+	/* PC5  */  GPIO_ADC12_INP8   \
 
 
 /* Define Channel numbers must match above GPIO pin IN(n)*/
-#define ADC_BATTERY_VOLTAGE_CHANNEL     /* PC0  */  ADC1_CH(10)
-#define ADC_BATTERY_CURRENT_CHANNEL     /* PC1  */  ADC1_CH(11)
-
+#define ADC_BATTERY_CURRENT_CHANNEL            /* PC4 */  ADC1_CH(4)
+#define ADC_BATTERY_VOLTAGE_CHANNEL            /* PC5 */  ADC1_CH(8)
 
 #define ADC_CHANNELS \
 	((1 << ADC_BATTERY_VOLTAGE_CHANNEL) | \
