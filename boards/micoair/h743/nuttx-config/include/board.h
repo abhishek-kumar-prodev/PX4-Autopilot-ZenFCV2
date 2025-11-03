@@ -367,12 +367,17 @@
 
 #define GPIO_UART5_RX    GPIO_UART5_RX_3    /* PD2  Was undefined*/
 #define GPIO_UART5_TX    GPIO_UART5_TX_3    /* PC12  Was undefined*/
+#define GPIO_UART5_CTS   GPIO_UART5_CTS   /* PC9 was undefined*/
+#define GPIO_UART5_RTS   GPIO_UART5_RTS   /* PC8 was undefined*/
+
 
 #define GPIO_USART6_RX   GPIO_USART6_RX_1   /* PC7  OK*/
 #define GPIO_USART6_TX   GPIO_USART6_TX_1   /* PC6  OK*/
 
 #define GPIO_UART7_RX    GPIO_UART7_RX_3    /* PE7  OK*/
 #define GPIO_UART7_TX    GPIO_UART7_TX_3    /* PE8  OK*/
+#define GPIO_UART7_CTS   GPIO_UART7_CTS_1   /* PE10 was undefined*/
+#define GPIO_UART7_RTS   GPIO_UART7_RTS_1   /* PE9 was undefined*/
 
 
 #define GPIO_UART8_RX    GPIO_UART8_RX_1    /* PE0  OK*/
